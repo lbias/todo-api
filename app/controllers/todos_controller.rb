@@ -15,7 +15,7 @@ class TodosController < ApplicationController
 
   # GET /todos/1
   def show
-    render json: @todo
+    render json: @todo, include: 'notes'
   end
 
   # POST /todos
